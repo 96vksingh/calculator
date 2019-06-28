@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     Animation animation2;
     Animation bblink;
     Animation zzoom;
-
+    Animation bbounce;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         bblink = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.blink);
         zzoom = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.zoom_in);
+        bbounce= AnimationUtils.loadAnimation(getApplicationContext(),R.anim.bounce);
         add = (Button) findViewById(R.id.button);
         n1 = (EditText) findViewById(R.id.editText);
         n2 = (EditText) findViewById(R.id.editText2);
@@ -52,8 +53,9 @@ public class MainActivity extends AppCompatActivity {
 
                 if((n1.getText().length()) > 0 && (n2.getText().length() > 0))
                 {
+                    animation.setAnimationListener(null);
                     add.startAnimation(bblink);
-                    add.startAnimation(zzoom);
+                    //add.startAnimation(zzoom
                     pro.setText("ADDITION");
                     pro.startAnimation(bblink);
                     double val1=Double.parseDouble(n1.getText().toString());
@@ -76,8 +78,9 @@ public class MainActivity extends AppCompatActivity {
 
                 if((n1.getText().length()) > 0 && (n2.getText().length() > 0))
                 {
+                    animation.setAnimationListener(null);
                     sub.startAnimation(bblink);
-                    sub.startAnimation(zzoom);
+                    //sub.startAnimation(zzoom);
                     pro.setText("SUBTRACTION");
                     pro.startAnimation(bblink);
                     double val1=Double.parseDouble(n1.getText().toString());
@@ -100,8 +103,9 @@ public class MainActivity extends AppCompatActivity {
 
                 if((n1.getText().length()) > 0 && (n2.getText().length() > 0))
                 {
+                    animation.setAnimationListener(null);
                     mul.startAnimation(bblink);
-                    mul.startAnimation(zzoom);
+                    //mul.startAnimation(zzoom);
                     pro.setText("MULTIPLICATION");
                     pro.startAnimation(bblink);
                     double val1=Double.parseDouble(n1.getText().toString());
@@ -124,8 +128,9 @@ public class MainActivity extends AppCompatActivity {
 
                 if((n1.getText().length()) > 0 && (n2.getText().length() > 0))
                 {
+                    animation.setAnimationListener(null);
                     div.startAnimation(bblink);
-                    div.startAnimation(zzoom);
+                   // div.startAnimation(zzoom);
                     pro.setText("DIVISION");
                     pro.startAnimation(bblink);
                     double val1=Double.parseDouble(n1.getText().toString());
@@ -144,6 +149,15 @@ public class MainActivity extends AppCompatActivity {
         clr.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                clr.startAnimation(bbounce);
+                n1.startAnimation(bbounce);
+                n2.startAnimation(bbounce);
+                res.startAnimation(bbounce);
+                pro.startAnimation(bbounce);
+                add.startAnimation(bbounce);
+                sub.startAnimation(bbounce);
+                mul.startAnimation(bbounce);
+                div.startAnimation(bbounce);
                 n1.setText("");
                 n2.setText("");
                 res.setText("");
