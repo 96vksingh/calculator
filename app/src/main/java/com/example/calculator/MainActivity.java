@@ -53,8 +53,8 @@ public class MainActivity extends AppCompatActivity {
 
                 if((n1.getText().length()) > 0 && (n2.getText().length() > 0))
                 {
-                    animation.setAnimationListener(null);
-                    add.startAnimation(bblink);
+                   // animation.setAnimationListener(null);
+                    //add.startAnimation(bblink);
                     //add.startAnimation(zzoom
                     pro.setText("ADDITION");
                     pro.startAnimation(bblink);
@@ -78,8 +78,8 @@ public class MainActivity extends AppCompatActivity {
 
                 if((n1.getText().length()) > 0 && (n2.getText().length() > 0))
                 {
-                    animation.setAnimationListener(null);
-                    sub.startAnimation(bblink);
+                   // animation.setAnimationListener(null);
+                   // sub.startAnimation(bblink);
                     //sub.startAnimation(zzoom);
                     pro.setText("SUBTRACTION");
                     pro.startAnimation(bblink);
@@ -103,8 +103,8 @@ public class MainActivity extends AppCompatActivity {
 
                 if((n1.getText().length()) > 0 && (n2.getText().length() > 0))
                 {
-                    animation.setAnimationListener(null);
-                    mul.startAnimation(bblink);
+                   // animation.setAnimationListener(null);
+                   // mul.startAnimation(bblink);
                     //mul.startAnimation(zzoom);
                     pro.setText("MULTIPLICATION");
                     pro.startAnimation(bblink);
@@ -128,8 +128,8 @@ public class MainActivity extends AppCompatActivity {
 
                 if((n1.getText().length()) > 0 && (n2.getText().length() > 0))
                 {
-                    animation.setAnimationListener(null);
-                    div.startAnimation(bblink);
+                   // animation.setAnimationListener(null);
+                    //div.startAnimation(bblink);
                    // div.startAnimation(zzoom);
                     pro.setText("DIVISION");
                     pro.startAnimation(bblink);
